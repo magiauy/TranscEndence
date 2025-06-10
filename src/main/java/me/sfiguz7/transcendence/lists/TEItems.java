@@ -142,7 +142,7 @@ public final class TEItems {
         "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjA5MGQwOWUxNzNlZTM0MTM4YzNiMDFiNDhlZTBiZTUzNGJiYjFhY2UwZGRmNWZmOThlNjZmN2IwMjExMzk5NSJ9fX0=",
         "&6Zot &eAlpha",        // Màu vàng/gold
         "&9Concentrated matter",
-        "&7Charge: &e0/1000"
+        "&7Charge: &e0/2000"
     );
     
     public static final SlimefunItemStack ZOT_BETA = new SlimefunItemStack("ZOT_BETA",
@@ -150,7 +150,7 @@ public final class TEItems {
         "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0NzFmMWM3MmI0NjVlY2Y3MWRjMGI0YWJlMmQ1MWI3NzkyZGRmNTU5NTJmMTFjY2E1ZTk1OTljOWRmMWQ1MiJ9fX0=",
         "&3Zot &bBeta",         // Màu cyan
         "&9Concentrated matter",
-        "&7Charge: &b0/1000"
+        "&7Charge: &b0/2000"
     );
     
     public static final SlimefunItemStack ZOT_GAMMA = new SlimefunItemStack("ZOT_GAMMA",
@@ -158,14 +158,14 @@ public final class TEItems {
         "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmY5YmI5ZTU2MTI1YzgyMjdiOTRiYmRhOWY2ZTBmODYyOTMxYzIyOTI1NWJhOGYxMjA1ZDEzYzQ0YzFiYjU2MSJ9fX0=",
         "&8Zot &7Gamma",        // Màu xám/gray
         "&9Concentrated matter",
-        "&7Charge: &70/1000"
+        "&7Charge: &70/2000"
     );
       public static final SlimefunItemStack ZOT_DELTA = new SlimefunItemStack("ZOT_DELTA",
         //Silver
         "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZjYzhkMjZjNjQ1YzNiYWQyOWIyZjJhMTMxYTYyOGVkYzliZmNiYmU2M2ZkMzkxY2UxNWMyYmM4OWNjOTBjYiJ9fX0=",
         "&7Zot &fDelta",        // Màu bạc/silver
         "&9Concentrated matter",
-        "&7Charge: &f0/1000"
+        "&7Charge: &f0/2000"
     );
     
     public static final SlimefunItemStack ZOT_OMEGA = new SlimefunItemStack("ZOT_OMEGA",
@@ -173,7 +173,7 @@ public final class TEItems {
         "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQ5MGM1NjUyMjNhN2ZlOTY5OWE1MjNhM2Q5MDRlNGExYTMzYTkxMzM1NDgyZjE0YzkzZWE2ZjQ0NjdjZWYifX19",
         "&5Zot &dOmega",        // Màu tím/purple
         "&9Concentrated matter",  
-        "&7Charge: &d0/1000"
+        "&7Charge: &d0/2000"
     );
     
     public static final SlimefunItemStack ZOT_ALPHA_2 = new SlimefunItemStack("ZOT_ALPHA_2",
