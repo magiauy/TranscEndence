@@ -273,12 +273,13 @@ public class Daxi extends SlimefunItem {
             true
         ),
         UNDYNE(TEItems.DAXI_UNDYNE,
-            new ItemStack[] {TEItems.ZOT_BETA_2, TEItems.ZOT_OMEGA_2, TEItems.ZOT_BETA_2, TEItems.ZOT_OMEGA_2},
+            new ItemStack[] {null},
             new ItemStack[] {TEItems.ZOT_BETA, TEItems.ZOT_OMEGA, TEItems.ZOT_BETA, TEItems.ZOT_OMEGA},
             new Color[] {Color.TEAL, Color.PURPLE, Color.NAVY, Color.FUCHSIA},
             DaxiEffectType.UNDYNE,
             CONFIG.getInt("daxi-effects.undying-level"),
-            CONFIG.getString("options.daxi-message-undying")
+            CONFIG.getString("options.daxi-message-undying"),
+            true
         ),
         RADIATION_IMMUNITY(TEItems.DAXI_RADIATION_IMMUNITY,
             new ItemStack[] {TEItems.ZOT_GAMMA_2, TEItems.ZOT_ALPHA_2, TEItems.ZOT_GAMMA_2, TEItems.ZOT_ALPHA_2},
@@ -315,7 +316,7 @@ public class Daxi extends SlimefunItem {
         this.message = message;
     }
 
-    // Constructor cho DaxiTranscendentHeal
+    // Constructor cho DaxiPotionEffectCustom
     Type(SlimefunItemStack itemStack, ItemStack[] recipe, ItemStack[] zotsAnimation, Color[] colors,
          PotionEffectType effect, int level, String message,boolean isCustom) {
         this.slimefunItem = itemStack;
@@ -324,6 +325,19 @@ public class Daxi extends SlimefunItem {
         this.recipe = recipe;
         this.potionEffect = effect;
         this.customEffect = null;
+        this.level = level - 1;
+        this.message = message;
+    }
+
+    // Constructer cho DaxiEffectTypeCustom
+    Type(SlimefunItemStack itemStack, ItemStack[] recipe, ItemStack[] zotsAnimation, Color[] colors,
+         DaxiEffectType effect, int level, String message,boolean isCustom) {
+        this.slimefunItem = itemStack;
+        this.zotsAnimation = zotsAnimation;
+        this.colors = colors;
+        this.recipe = recipe;
+        this.potionEffect = null;
+        this.customEffect = effect;
         this.level = level - 1;
         this.message = message;
     }

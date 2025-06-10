@@ -29,7 +29,7 @@ daxi-effects:
   fortitude-level: 4
   saturation-level: 1
   regeneration-level: 2
-  speed-level: 7
+  fast-walker-level: 7
   transcendent-heal-level: 10
   nuker-level: 7
 
