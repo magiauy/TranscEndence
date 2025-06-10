@@ -53,43 +53,41 @@ public final class TEItems {
         "&aQuirp Right",
         "&9Fundamental particle of the Universe"
     );
-    public static final SlimefunItemStack QUIRP_CONDENSATE = new SlimefunItemStack("QUIRPCONDENSATE",
-        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFlMWY2MTYyZGI0MjI0NTYzOTYwOWY3MjhhNGUxMzRlZDdiZDdkZTNjMTVhNzc5MmQyMTlhNmUyYTlkYiJ9fX0=",
-        "&5Quirp Condensate",
-        "&9An energy singularity"
+    public static final SlimefunItemStack QUIRP_ALPHA = new SlimefunItemStack("QUIRP_ALPHA",
+        //Gold
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTQzYzc5Y2Q5YzJkMzE4N2VhMDMyNDVmZTIxMjhlMGQyYWJiZTc5NDUyMTRiYzU4MzRkZmE0MDNjMTM0ZTI3In19fQ==",
+        "&6Quirp &eAlpha",
+        "&9Fundamental particle of the Universe"
     );
-    public static final SlimefunItemStack UNSTABLE_INGOT = new SlimefunItemStack("UNSTABLEINGOT",
-        Material.NETHER_BRICK,
-        "&4Unstable Ingot",
-        "&9Kills you if held for",
-        "&9more than a few instants",
-        "",
-        TranscendenceLoreBuilder.unstable()
+
+    public static final SlimefunItemStack QUIRP_BETA = new SlimefunItemStack("QUIRP_BETA",
+        //Cyan
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBmYjFmMTNlY2I3ZmJiMmZhNDljZDAzZDM1N2ZhN2UyNzg1MDJiNzg3MzA2MDJhYWExMDY1NWU0ZDk0OTBlMSJ9fX0=",
+        "&3Quirp &bBeta",
+        "&9Fundamental particle of the Universe"
     );
-    public static final SlimefunItemStack UNSTABLE_INGOT_2 = new SlimefunItemStack("UNSTABLEINGOT2",
-        Material.NETHER_BRICK,
-        "&4Unstable Ingot 75%",
-        "&9Kills you if held for",
-        "&9more than a few instants",
-        "",
-        TranscendenceLoreBuilder.unstable()
+
+    public static final SlimefunItemStack QUIRP_GAMMA = new SlimefunItemStack("QUIRP_GAMMA",
+        //Gray
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjliYTdmZWY2YTFhOGJkODk5YWJhZTRhNWI1NGNiMGVjZTUzYmFkYzY3N2MxNjY4YmVlMGE0NjIxYTgifX19",
+        "&8Quirp &7Gamma",
+        "&9Fundamental particle of the Universe"
     );
-    public static final SlimefunItemStack UNSTABLE_INGOT_3 = new SlimefunItemStack("UNSTABLEINGOT3",
-        Material.NETHER_BRICK,
-        "&4Unstable Ingot 50%",
-        "&9Kills you if held for",
-        "&9more than a few instants",
-        "",
-        TranscendenceLoreBuilder.unstable()
+
+    public static final SlimefunItemStack QUIRP_DELTA = new SlimefunItemStack("QUIRP_DELTA",
+        //Black
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjZlMWFkMWUyNDNmNzJjZjdmMWNkMThkMjEyMDQ1NWVmZDllNDU5ODg3NmEyOTY2YzI4OGQ0NjI1MjJiYmIifX19",
+        "&0Quirp &8Delta",
+        "&9Fundamental particle of the Universe"
     );
-    public static final SlimefunItemStack UNSTABLE_INGOT_4 = new SlimefunItemStack("UNSTABLEINGOT4",
-        Material.NETHER_BRICK,
-        "&4Unstable Ingot 25%",
-        "&9Kills you if held for",
-        "&9more than a few instants",
-        "",
-        TranscendenceLoreBuilder.unstable()
+
+    public static final SlimefunItemStack QUIRP_OMEGA = new SlimefunItemStack("QUIRP_OMEGA",
+        //Purple
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc4Yzc3NzhiM2VjNzk2ZjhlMDQzOTllNjEzNjIzMTM1MTMwYWQ1NDE4YWFjY2U0Y2IzNTg3OTg0ZjFhZSJ9fX0=",
+        "&5Quirp &dOmega",
+        "&9Fundamental particle of the Universe"
     );
+  
     public static final SlimefunItemStack ZOT_UP = new SlimefunItemStack("ZOT_UP",
         "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19",
         "&aZot Up",
@@ -137,6 +135,130 @@ public final class TEItems {
         "&cZot Right",
         "&9Concentrated matter",
         "&7Charge: &c1000/1000"
+    );
+    public static final SlimefunItemStack ZOT_ALPHA = new SlimefunItemStack("ZOT_ALPHA",
+        //Gold
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjA5MGQwOWUxNzNlZTM0MTM4YzNiMDFiNDhlZTBiZTUzNGJiYjFhY2UwZGRmNWZmOThlNjZmN2IwMjExMzk5NSJ9fX0=",
+        "&6Zot &eAlpha",        // Màu vàng/gold
+        "&9Concentrated matter",
+        "&7Charge: &e0/1000"
+    );
+    
+    public static final SlimefunItemStack ZOT_BETA = new SlimefunItemStack("ZOT_BETA",
+        //Cyan
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0NzFmMWM3MmI0NjVlY2Y3MWRjMGI0YWJlMmQ1MWI3NzkyZGRmNTU5NTJmMTFjY2E1ZTk1OTljOWRmMWQ1MiJ9fX0=",
+        "&3Zot &bBeta",         // Màu cyan
+        "&9Concentrated matter",
+        "&7Charge: &b0/1000"
+    );
+    
+    public static final SlimefunItemStack ZOT_GAMMA = new SlimefunItemStack("ZOT_GAMMA",
+        //Gray
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmY5YmI5ZTU2MTI1YzgyMjdiOTRiYmRhOWY2ZTBmODYyOTMxYzIyOTI1NWJhOGYxMjA1ZDEzYzQ0YzFiYjU2MSJ9fX0=",
+        "&8Zot &7Gamma",        // Màu xám/gray
+        "&9Concentrated matter",
+        "&7Charge: &70/1000"
+    );
+      public static final SlimefunItemStack ZOT_DELTA = new SlimefunItemStack("ZOT_DELTA",
+        //Silver
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZjYzhkMjZjNjQ1YzNiYWQyOWIyZjJhMTMxYTYyOGVkYzliZmNiYmU2M2ZkMzkxY2UxNWMyYmM4OWNjOTBjYiJ9fX0=",
+        "&7Zot &fDelta",        // Màu bạc/silver
+        "&9Concentrated matter",
+        "&7Charge: &f0/1000"
+    );
+    
+    public static final SlimefunItemStack ZOT_OMEGA = new SlimefunItemStack("ZOT_OMEGA",
+        //Purple
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQ5MGM1NjUyMjNhN2ZlOTY5OWE1MjNhM2Q5MDRlNGExYTMzYTkxMzM1NDgyZjE0YzkzZWE2ZjQ0NjdjZWYifX19",
+        "&5Zot &dOmega",        // Màu tím/purple
+        "&9Concentrated matter",  
+        "&7Charge: &d0/1000"
+    );
+    
+    public static final SlimefunItemStack ZOT_ALPHA_2 = new SlimefunItemStack("ZOT_ALPHA_2",
+        //Gold
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjA5MGQwOWUxNzNlZTM0MTM4YzNiMDFiNDhlZTBiZTUzNGJiYjFhY2UwZGRmNWZmOThlNjZmN2IwMjExMzk5NSJ9fX0=",
+        "&6Zot &eAlpha",        // Màu vàng/gold
+        "&9Transcendent matter essence",
+        "&7Charge: &e2000/2000",
+        "",
+        "&c&lTRANSCENDENT"
+    );
+    
+    public static final SlimefunItemStack ZOT_BETA_2 = new SlimefunItemStack("ZOT_BETA_2",
+        //Cyan
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0NzFmMWM3MmI0NjVlY2Y3MWRjMGI0YWJlMmQ1MWI3NzkyZGRmNTU5NTJmMTFjY2E1ZTk1OTljOWRmMWQ1MiJ9fX0=",
+        "&3Zot &bBeta",         // Màu cyan
+        "&9Transcendent matter essence",
+        "&7Charge: &b2000/2000",
+        "",
+        "&c&lTRANSCENDENT"
+    );
+    
+    public static final SlimefunItemStack ZOT_GAMMA_2 = new SlimefunItemStack("ZOT_GAMMA_2",
+        //Gray
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmY5YmI5ZTU2MTI1YzgyMjdiOTRiYmRhOWY2ZTBmODYyOTMxYzIyOTI1NWJhOGYxMjA1ZDEzYzQ0YzFiYjU2MSJ9fX0=",
+        "&8Zot &7Gamma",        // Màu xám/gray
+        "&9Transcendent matter essence",
+        "&7Charge: &72000/2000",
+        "",
+        "&c&lTRANSCENDENT"
+    );
+      public static final SlimefunItemStack ZOT_DELTA_2 = new SlimefunItemStack("ZOT_DELTA_2",
+        //Silver
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZjYzhkMjZjNjQ1YzNiYWQyOWIyZjJhMTMxYTYyOGVkYzliZmNiYmU2M2ZkMzkxY2UxNWMyYmM4OWNjOTBjYiJ9fX0=",
+        "&7Zot &fDelta",        // Màu bạc/silver
+        "&9Transcendent matter essence",
+        "&7Charge: &f2000/2000",
+        "",
+        "&c&lTRANSCENDENT"
+    );
+    
+    public static final SlimefunItemStack ZOT_OMEGA_2 = new SlimefunItemStack("ZOT_OMEGA_2",
+        //Purple
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQ5MGM1NjUyMjNhN2ZlOTY5OWE1MjNhM2Q5MDRlNGExYTMzYTkxMzM1NDgyZjE0YzkzZWE2ZjQ0NjdjZWYifX19",
+        "&5Zot &dOmega",        // Màu tím/purple
+        "&9Transcendent matter essence",  
+        "&7Charge: &d2000/2000",
+        "",
+        "&c&lTRANSCENDENT"
+    );
+      public static final SlimefunItemStack QUIRP_CONDENSATE = new SlimefunItemStack("QUIRPCONDENSATE",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFlMWY2MTYyZGI0MjI0NTYzOTYwOWY3MjhhNGUxMzRlZDdiZDdkZTNjMTVhNzc5MmQyMTlhNmUyYTlkYiJ9fX0=",
+        "&5Quirp Condensate",
+        "&9An energy singularity"
+    );
+    public static final SlimefunItemStack UNSTABLE_INGOT = new SlimefunItemStack("UNSTABLEINGOT",
+        Material.NETHER_BRICK,
+        "&4Unstable Ingot",
+        "&9Kills you if held for",
+        "&9more than a few instants",
+        "",
+        TranscendenceLoreBuilder.unstable()
+    );
+    public static final SlimefunItemStack UNSTABLE_INGOT_2 = new SlimefunItemStack("UNSTABLEINGOT2",
+        Material.NETHER_BRICK,
+        "&4Unstable Ingot 75%",
+        "&9Kills you if held for",
+        "&9more than a few instants",
+        "",
+        TranscendenceLoreBuilder.unstable()
+    );
+    public static final SlimefunItemStack UNSTABLE_INGOT_3 = new SlimefunItemStack("UNSTABLEINGOT3",
+        Material.NETHER_BRICK,
+        "&4Unstable Ingot 50%",
+        "&9Kills you if held for",
+        "&9more than a few instants",
+        "",
+        TranscendenceLoreBuilder.unstable()
+    );
+    public static final SlimefunItemStack UNSTABLE_INGOT_4 = new SlimefunItemStack("UNSTABLEINGOT4",
+        Material.NETHER_BRICK,
+        "&4Unstable Ingot 25%",
+        "&9Kills you if held for",
+        "&9more than a few instants",
+        "",
+        TranscendenceLoreBuilder.unstable()
     );
     public static final SlimefunItemStack STABLE_INGOT = new SlimefunItemStack("STABLEINGOT",
         Material.BRICK,
@@ -208,6 +330,17 @@ public final class TEItems {
         LoreBuilder.powerBuffer(512),
         LoreBuilder.powerPerSecond(256)
     );
+    public static final SlimefunItemStack QUIRP_OSCILLATOR_2 = new SlimefunItemStack("QUIRP_OSCILLATOR_2",
+        Material.PURPUR_STAIRS,
+        "&5Quirp Oscillator II",
+        "Advanced void particle manipulation",
+        "Generates Greek-letter Quirps",
+        "&cWorks only in the end!",
+        "",
+        LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+        LoreBuilder.powerBuffer(2048),
+        LoreBuilder.powerPerSecond(512)
+    );
     public static final SlimefunItemStack QUIRP_ANNIHILATOR = new SlimefunItemStack("QUIRP_ANNIHILATOR",
         Material.YELLOW_CONCRETE,
         "&cQuirp Annihilator",
@@ -256,4 +389,39 @@ public final class TEItems {
     );
     private TEItems() {
     }
+
+    public static final SlimefunItemStack DAXI_VOID_WALKER = new SlimefunItemStack("DAXI_VOID_WALKER",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
+        "&aDaxi (Void Walker)",
+        "&9Right click to unleash its power",
+        "&9F5 mode recommended!"
+    );
+
+    public static final SlimefunItemStack DAXI_ENHANCED_COMBAT = new SlimefunItemStack("DAXI_ENHANCED_COMBAT",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
+        "&aDaxi (Combat Master)",
+        "&9Right click to unleash its power",
+        "&9F5 mode recommended!"
+    );
+
+    public static final SlimefunItemStack DAXI_TRANSCENDENT_HEAL = new SlimefunItemStack("DAXI_TRANSCENDENT_HEAL",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
+        "&aDaxi (Divine Heal)",
+        "&9Right click to unleash its power",
+        "&9F5 mode recommended!"
+    );
+
+    public static final SlimefunItemStack DAXI_SUPER_ABSORPTION = new SlimefunItemStack("DAXI_SUPER_ABSORPTION",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
+        "&aDaxi (Super Guard)",
+        "&9Right click to unleash its power",
+        "&9F5 mode recommended!"
+    );
+
+    public static final SlimefunItemStack DAXI_RADIATION_IMMUNITY = new SlimefunItemStack("DAXI_RADIATION_IMMUNITY",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
+        "&aDaxi (Rad Immune)",
+        "&9Right click to unleash its power",
+        "&9F5 mode recommended!"
+    );
 }

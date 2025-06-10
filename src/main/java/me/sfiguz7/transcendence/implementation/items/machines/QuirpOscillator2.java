@@ -2,7 +2,6 @@ package me.sfiguz7.transcendence.implementation.items.machines;
 
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
@@ -30,19 +29,18 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements TEInventoryBlock, EnergyNetComponent {
+public class QuirpOscillator2 extends SimpleSlimefunItem<BlockTicker> implements TEInventoryBlock, EnergyNetComponent {
 
-    private static final int ENERGY_CONSUMPTION = 128;
-    private final ItemStack[] quirps = {TEItems.QUIRP_UP,
-        TEItems.QUIRP_DOWN,
-        TEItems.QUIRP_LEFT,
-        TEItems.QUIRP_RIGHT
+    private static final int ENERGY_CONSUMPTION = 512;
+    private final ItemStack[] advancedQuirps = {
+        TEItems.QUIRP_ALPHA,    // Gold/Yellow
+        TEItems.QUIRP_BETA,     // Cyan  
+        TEItems.QUIRP_GAMMA,    // Gray
+        TEItems.QUIRP_DELTA,    // Silver
+        TEItems.QUIRP_OMEGA     // Purple
     };
-    private final int[] chancesDefault = {25,
-        25,
-        25,
-        25
-    };
+    private final int[] chancesDefault = {20, 20, 20, 20, 20}; // Equal 20% chance for each
+    
     private final int[] border = {
         0, 1, 2, 3, 4, 5, 6, 7, 8,
         12, 13,
@@ -53,7 +51,7 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
     private final int[] inputBorder = {};
     private final int[] outputBorder = {
         14, 15, 16, 17,
-        23, 26,
+        23, 24, 25, 26,
         32, 33, 34, 35
     };
     private final int[] polarizerBorder = {
@@ -64,15 +62,21 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
     private final int polarizerSlot = 19;
     private int decrement = 20;
 
-    public QuirpOscillator() {
-        super(TEItems.transcendence, TEItems.QUIRP_OSCILLATOR, TERecipeType.NANOBOT_CRAFTER,
-            new ItemStack[] {SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.REINFORCED_PLATE,
-                SlimefunItems.BLISTERING_INGOT_3,
-                SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.NETHER_STAR_REACTOR, SlimefunItems.SYNTHETIC_EMERALD,
-                SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.REINFORCED_PLATE, SlimefunItems.BLISTERING_INGOT_3}
+    public QuirpOscillator2() {
+        super(TEItems.transcendence, TEItems.QUIRP_OSCILLATOR_2, TERecipeType.NANOBOT_CRAFTER,
+            new ItemStack[] {
+                Materials.MAGSTEEL_PLATE, TEItems.QUIRP_OSCILLATOR, Materials.MAGSTEEL_PLATE,
+                Materials.MACHINE_CIRCUIT, setAmount(Materials.VOID_INGOT.clone(), 32), Materials.MACHINE_CIRCUIT,
+                Materials.MAGSTEEL_PLATE, Materials.INFINITE_INGOT, Materials.MAGSTEEL_PLATE
+            }
         );
 
         createPreset(this, this::constructMenu);
+    }
+
+    private static ItemStack setAmount(ItemStack item, int amount) {
+        item.setAmount(amount);
+        return item;
     }
 
     private void constructMenu(BlockMenuPreset preset) {
@@ -128,7 +132,7 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
 
     @Override
     public int getCapacity() {
-        return 512;
+        return 2048;
     }
 
     @Override
@@ -146,7 +150,6 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
                     return;
                 }
                 decrement--;
-
             }
 
             @Override
@@ -163,7 +166,7 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
                 }
 
                 BlockMenu menu = BlockStorage.getInventory(b);
-                ItemStack output = getQuirp(menu);
+                ItemStack output = getAdvancedQuirp(menu);
 
                 if (getCharge(b.getLocation()) >= ENERGY_CONSUMPTION) {
 
@@ -176,14 +179,14 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
                 }
             }
 
-            private ItemStack getQuirp(BlockMenu menu) {
+            private ItemStack getAdvancedQuirp(BlockMenu menu) {
                 int index = ThreadLocalRandom.current().nextInt(100);
                 int accruedchance = 0;
                 int[] chances = getChances(menu);
-                for (int i = 0; i < quirps.length; i++) {
+                for (int i = 0; i < advancedQuirps.length; i++) {
                     accruedchance += chances[i];
                     if (index < accruedchance) {
-                        return quirps[i].clone();
+                        return advancedQuirps[i].clone();
                     }
                 }
                 //Never reached
@@ -193,10 +196,12 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
             private int[] getChances(BlockMenu menu) {
                 ItemStack pol = menu.getItemInSlot(polarizerSlot);
                 if (SlimefunUtils.isItemSimilar(pol, TEItems.VERTICAL_POLARIZER, true)) {
-                    return Polarizer.getChances(Polarizer.Type.VERTICAL);
+                    // Vertical polarizer affects Alpha/Gamma (up/down energy flow)
+                    return new int[]{35, 15, 35, 10, 5}; // Alpha, Beta, Gamma, Delta, Omega
                 }
                 if (SlimefunUtils.isItemSimilar(pol, TEItems.HORIZONTAL_POLARIZER, true)) {
-                    return Polarizer.getChances(Polarizer.Type.HORIZONTAL);
+                    // Horizontal polarizer affects Beta/Delta (side energy flow)
+                    return new int[]{10, 35, 15, 35, 5}; // Alpha, Beta, Gamma, Delta, Omega
                 }
                 return chancesDefault;
             }
@@ -207,7 +212,4 @@ public class QuirpOscillator extends SimpleSlimefunItem<BlockTicker> implements 
             }
         };
     }
-
 }
-
-

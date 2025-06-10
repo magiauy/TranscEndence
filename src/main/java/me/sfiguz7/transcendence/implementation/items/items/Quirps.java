@@ -24,7 +24,18 @@ public class Quirps extends SlimefunItem {
         RIGHT(TEItems.QUIRP_RIGHT
         ),
         CONDENSATE(TEItems.QUIRP_CONDENSATE
+        ),
+        ALPHA(TEItems.QUIRP_ALPHA
+        ),
+        BETA(TEItems.QUIRP_BETA
+        ),
+        GAMMA(TEItems.QUIRP_GAMMA
+        ),
+        DELTA(TEItems.QUIRP_DELTA
+        ),
+        OMEGA(TEItems.QUIRP_OMEGA
         );
+        
 
         private final SlimefunItemStack slimefunItem;
         private final ItemStack[] recipe;

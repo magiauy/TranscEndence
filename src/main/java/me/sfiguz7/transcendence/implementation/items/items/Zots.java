@@ -20,7 +20,19 @@ public class Zots extends SlimefunItem {
         LEFT(TEItems.ZOT_LEFT, TEItems.QUIRP_LEFT
         ),
         RIGHT(TEItems.ZOT_RIGHT, TEItems.QUIRP_RIGHT
+        ),
+        ALPHA(TEItems.ZOT_ALPHA, TEItems.QUIRP_ALPHA
+        ),
+        BETA(TEItems.ZOT_BETA, TEItems.QUIRP_BETA
+        ),
+        GAMMA(TEItems.ZOT_GAMMA, TEItems.QUIRP_GAMMA
+        ),
+        DELTA(TEItems.ZOT_DELTA, TEItems.QUIRP_DELTA
+        ),
+        OMEGA(TEItems.ZOT_OMEGA, TEItems.QUIRP_OMEGA
         );
+        
+        
 
         private final SlimefunItemStack slimefunItem;
         private final ItemStack[] recipe;

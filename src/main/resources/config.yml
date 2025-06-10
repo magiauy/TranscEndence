@@ -27,3 +27,7 @@ daxi-effects:
 
 guide:
   recieve-on-first-join: true
+
+debug:
+  radiation: true
+  daxi-effects: true

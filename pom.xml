@@ -22,7 +22,6 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
@@ -103,9 +102,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.TheBusyBiscuit</groupId>
+            <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-27</version>
+            <version>RC-37</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -117,6 +116,18 @@
                     <artifactId>bstats-bukkit</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>        
+        <dependency>
+            <groupId>io.github.mooy1</groupId>
+            <artifactId>InfinityLib</artifactId>
+            <version>7e03c79</version>
+            <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.magiauy</groupId>
+            <artifactId>InfinityExpansion</artifactId>
+            <version>1872496915</version>
+            <scope>provided</scope>
+	    </dependency>
     </dependencies>
 </project>
