@@ -1,14 +1,11 @@
 package me.sfiguz7.transcendence.implementation.items.items;
 
-import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import io.github.thebusybiscuit.slimefun4.core.attributes.ProtectionType;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
-import me.sfiguz7.transcendence.TranscEndence;
-import me.sfiguz7.transcendence.lists.TEItems;
-import me.sfiguz7.transcendence.lists.TERecipeType;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Location;
@@ -18,17 +15,18 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-import java.util.concurrent.ThreadLocalRandom;
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import me.sfiguz7.transcendence.TranscEndence;
+import me.sfiguz7.transcendence.lists.TEItems;
+import me.sfiguz7.transcendence.lists.TERecipeType;
 
 public class Daxi extends SlimefunItem {
 
@@ -192,10 +190,7 @@ public class Daxi extends SlimefunItem {
     // Thêm enum DaxiEffectType trước enum Type
     public enum DaxiEffectType {
         RADIATION_IMMUNITY,
-        ENHANCED_DAMAGE,
-        SUPER_ABSORPTION,
-        VOID_RESISTANCE,
-        TRANSCENDENT_REGENERATION
+        UNDYNE
     }
     
     public enum Type {
@@ -248,37 +243,42 @@ public class Daxi extends SlimefunItem {
         //     CONFIG.getString("options.daxi-message-speed")
         // ),
         // Thêm các Type mới sử dụng DaxiEffectType
-        VOID_WALKER(TEItems.DAXI_VOID_WALKER,
+        FAST_WALKER(TEItems.DAXI_FAST_WALKER,
             new ItemStack[] {TEItems.ZOT_DELTA_2, TEItems.ZOT_DELTA_2, TEItems.ZOT_OMEGA_2, TEItems.ZOT_OMEGA_2},
             new ItemStack[] {TEItems.ZOT_DELTA, TEItems.ZOT_DELTA, TEItems.ZOT_OMEGA, TEItems.ZOT_OMEGA},
             new Color[] {Color.BLACK, Color.PURPLE, Color.BLACK, Color.PURPLE},
-            DaxiEffectType.VOID_RESISTANCE,
-            CONFIG.getInt("daxi-effects.void-walker-level"),
-            CONFIG.getString("options.daxi-message-void-walker")
+            PotionEffectType.SPEED,
+            CONFIG.getInt("daxi-effects.fast-walker-level"),
+            CONFIG.getString("options.daxi-message-fast-walker")
         ),
-        ENHANCED_COMBAT(TEItems.DAXI_ENHANCED_COMBAT,
+        NUKER(TEItems.DAXI_NUKER,
             new ItemStack[] {TEItems.ZOT_ALPHA_2, TEItems.ZOT_DELTA_2, TEItems.ZOT_ALPHA_2, TEItems.ZOT_DELTA_2},
             new ItemStack[] {TEItems.ZOT_ALPHA, TEItems.ZOT_DELTA, TEItems.ZOT_ALPHA, TEItems.ZOT_DELTA},
             new Color[] {Color.YELLOW, Color.BLACK, Color.RED, Color.MAROON},
-            DaxiEffectType.ENHANCED_DAMAGE,
-            CONFIG.getInt("daxi-effects.enhanced-combat-level"),
-            CONFIG.getString("options.daxi-message-enhanced-combat")
+            PotionEffectType.FAST_DIGGING,
+            CONFIG.getInt("daxi-effects.nuker-level"),
+            CONFIG.getString("options.daxi-message-nuker")
         ),
         TRANSCENDENT_HEAL(TEItems.DAXI_TRANSCENDENT_HEAL,
-            new ItemStack[] {TEItems.ZOT_OMEGA_2, TEItems.ZOT_BETA_2, TEItems.ZOT_GAMMA_2, TEItems.ZOT_ALPHA_2},
+            new ItemStack[] {
+                TEItems.DAXI_REGENERATION, TEItems.ZOT_DELTA_2, TEItems.DAXI_REGENERATION,
+                TEItems.ZOT_GAMMA_2, TEItems.STABLE_INGOT, TEItems.ZOT_ALPHA_2,
+                TEItems.DAXI_REGENERATION, TEItems.ZOT_BETA_2, TEItems.DAXI_REGENERATION
+            },
             new ItemStack[] {TEItems.ZOT_OMEGA, TEItems.ZOT_BETA, TEItems.ZOT_GAMMA, TEItems.ZOT_ALPHA},
             new Color[] {Color.PURPLE, Color.AQUA, Color.LIME, Color.YELLOW},
-            DaxiEffectType.TRANSCENDENT_REGENERATION,
+            PotionEffectType.REGENERATION,
             CONFIG.getInt("daxi-effects.transcendent-heal-level"),
-            CONFIG.getString("options.daxi-message-transcendent-heal")
+            CONFIG.getString("options.daxi-message-transcendent-heal"),
+            true
         ),
-        SUPER_ABSORPTION(TEItems.DAXI_SUPER_ABSORPTION,
+        UNDYNE(TEItems.DAXI_UNDYNE,
             new ItemStack[] {TEItems.ZOT_BETA_2, TEItems.ZOT_OMEGA_2, TEItems.ZOT_BETA_2, TEItems.ZOT_OMEGA_2},
             new ItemStack[] {TEItems.ZOT_BETA, TEItems.ZOT_OMEGA, TEItems.ZOT_BETA, TEItems.ZOT_OMEGA},
             new Color[] {Color.TEAL, Color.PURPLE, Color.NAVY, Color.FUCHSIA},
-            DaxiEffectType.SUPER_ABSORPTION,
-            CONFIG.getInt("daxi-effects.super-absorption-level"),
-            CONFIG.getString("options.daxi-message-super-absorption")
+            DaxiEffectType.UNDYNE,
+            CONFIG.getInt("daxi-effects.undying-level"),
+            CONFIG.getString("options.daxi-message-undying")
         ),
         RADIATION_IMMUNITY(TEItems.DAXI_RADIATION_IMMUNITY,
             new ItemStack[] {TEItems.ZOT_GAMMA_2, TEItems.ZOT_ALPHA_2, TEItems.ZOT_GAMMA_2, TEItems.ZOT_ALPHA_2},
@@ -309,6 +309,19 @@ public class Daxi extends SlimefunItem {
             TEItems.STABLE_BLOCK, zots[0], TEItems.STABLE_BLOCK,
             zots[1], TEItems.STABLE_INGOT, zots[2],
             TEItems.STABLE_BLOCK, zots[3], TEItems.STABLE_BLOCK};
+        this.potionEffect = effect;
+        this.customEffect = null;
+        this.level = level - 1;
+        this.message = message;
+    }
+
+    // Constructor cho DaxiTranscendentHeal
+    Type(SlimefunItemStack itemStack, ItemStack[] recipe, ItemStack[] zotsAnimation, Color[] colors,
+         PotionEffectType effect, int level, String message,boolean isCustom) {
+        this.slimefunItem = itemStack;
+        this.zotsAnimation = zotsAnimation;
+        this.colors = colors;
+        this.recipe = recipe;
         this.potionEffect = effect;
         this.customEffect = null;
         this.level = level - 1;

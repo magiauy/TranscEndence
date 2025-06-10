@@ -14,6 +14,11 @@ options:
   daxi-message-fortitude: "Enemy strikes are now less effective."
   daxi-message-saturation: "You won't need food for a while."
   daxi-message-regeneration: "You've acquired permanent self-healing."
+  daxi-message-radiation-immunity: "Radiation cannot budge you no more."
+  daxi-message-fast-walker: "Now you can race usain bolt."
+  daxi-message-transcendent-heal: "Now you are perfect..."
+  daxi-message-nuker: "Fast minors."
+  daxi-message-undyne: "Via determination, you can now rise from the dead."
   already-have-daxi-effect: "You already have this Daxi effect!"
   droppable-unstable-ingots: true
   unstable-ingots-message-undroppable: "Unstable Ingots are undroppable!"
@@ -24,6 +29,10 @@ daxi-effects:
   fortitude-level: 4
   saturation-level: 1
   regeneration-level: 2
+  speed-level: 7
+  transcendent-heal-level: 10
+  nuker-level: 7
+
 
 guide:
   recieve-on-first-join: true
