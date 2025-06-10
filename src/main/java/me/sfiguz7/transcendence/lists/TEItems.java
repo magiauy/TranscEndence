@@ -1,5 +1,8 @@
 package me.sfiguz7.transcendence.lists;
 
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
@@ -8,8 +11,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import me.sfiguz7.transcendence.TranscEndence;
 import me.sfiguz7.transcendence.implementation.utils.TranscendenceLoreBuilder;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 
 public final class TEItems {
 
@@ -390,36 +391,36 @@ public final class TEItems {
     private TEItems() {
     }
 
-    public static final SlimefunItemStack DAXI_VOID_WALKER = new SlimefunItemStack("DAXI_VOID_WALKER",
-        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
-        "&aDaxi (Void Walker)",
+    public static final SlimefunItemStack DAXI_FAST_WALKER = new SlimefunItemStack("DAXI_FAST_WALKER",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxYTI1MzIyMjg5NzgyNzA3OTIyNmJhZGZkNmNhMWQ4NzIzMDhhZTk4MTFmZmY3NjA4MGNhM2M3YzQwNGViOCJ9fX0=",
+        "&aDaxi (Fast Walker)",
         "&9Right click to unleash its power",
         "&9F5 mode recommended!"
     );
 
-    public static final SlimefunItemStack DAXI_ENHANCED_COMBAT = new SlimefunItemStack("DAXI_ENHANCED_COMBAT",
-        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
-        "&aDaxi (Combat Master)",
+    public static final SlimefunItemStack DAXI_NUKER = new SlimefunItemStack("DAXI_NUKER",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxYTI1MzIyMjg5NzgyNzA3OTIyNmJhZGZkNmNhMWQ4NzIzMDhhZTk4MTFmZmY3NjA4MGNhM2M3YzQwNGViOCJ9fX0=",
+        "&aDaxi (Nuker)",
         "&9Right click to unleash its power",
         "&9F5 mode recommended!"
     );
 
     public static final SlimefunItemStack DAXI_TRANSCENDENT_HEAL = new SlimefunItemStack("DAXI_TRANSCENDENT_HEAL",
-        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
-        "&aDaxi (Divine Heal)",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxYTI1MzIyMjg5NzgyNzA3OTIyNmJhZGZkNmNhMWQ4NzIzMDhhZTk4MTFmZmY3NjA4MGNhM2M3YzQwNGViOCJ9fX0=",
+        "&aDaxi (Transcendent Heal)",
         "&9Right click to unleash its power",
         "&9F5 mode recommended!"
     );
 
-    public static final SlimefunItemStack DAXI_SUPER_ABSORPTION = new SlimefunItemStack("DAXI_SUPER_ABSORPTION",
-        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
-        "&aDaxi (Super Guard)",
+    public static final SlimefunItemStack DAXI_UNDYNE = new SlimefunItemStack("DAXI_UNDYNE",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxYTI1MzIyMjg5NzgyNzA3OTIyNmJhZGZkNmNhMWQ4NzIzMDhhZTk4MTFmZmY3NjA4MGNhM2M3YzQwNGViOCJ9fX0=",
+        "&aDaxi (Undying)",
         "&9Right click to unleash its power",
         "&9F5 mode recommended!"
     );
 
     public static final SlimefunItemStack DAXI_RADIATION_IMMUNITY = new SlimefunItemStack("DAXI_RADIATION_IMMUNITY",
-        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2ZmYzk3N2NjN2UxMGU1NjRhMDk2MzhhNTNiYmM0YzU0YzljOGRhYzc0NTBiYTNkZmEzYzkwOTlkOTRmNSJ9fX0=",
+        "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxYTI1MzIyMjg5NzgyNzA3OTIyNmJhZGZkNmNhMWQ4NzIzMDhhZTk4MTFmZmY3NjA4MGNhM2M3YzQwNGViOCJ9fX0=",
         "&aDaxi (Rad Immune)",
         "&9Right click to unleash its power",
         "&9F5 mode recommended!"
